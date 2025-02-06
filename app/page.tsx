@@ -18,7 +18,7 @@ const ValentinesDispatch = () => {
           <div className="flex justify-center items-center gap-4 text-pink-300">
             <div className="text-2xl">←</div>
             <h3 className="text-sm tracking-wide" style={{ fontFamily: 'Times New Roman, serif' }}>
-              St. Valentine's Day : February 14th : The Hall Times
+              St. Valentine&apos;s Day : February 14th : The Hall Times
             </h3>
             <div className="text-2xl">→</div>
           </div>
@@ -30,7 +30,7 @@ const ValentinesDispatch = () => {
             Nerdy GF creates website to ask her gorgeous BF
           </h1>
           <h2 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'Times New Roman, serif' }}>
-            They're so cute!
+            They&apos;re so cute!
           </h2>
         </div>
           
@@ -82,10 +82,10 @@ const ValentinesDispatch = () => {
             {response === 'yes' ? (
               <>
                 <h2 className="text-4xl text-pink-500">Yay! ♥</h2>
-                <p className="text-xl">I'm the luckiest girl in the world!</p>
+                <p className="text-xl">I&apos;m the luckiest girl in the world!</p>
               </>
             ) : (
-              <p className="text-xl">The 'No' button was just for decoration, you're still mine 🥰</p>
+              <p className="text-xl">The &apos;No&apos; button was just for decoration, you&apos;re still mine 🥰</p>
             )}
           </div>
         )}
@@ -93,7 +93,7 @@ const ValentinesDispatch = () => {
         {/* Love Message */}
         <div className="text-xs text-gray-500 text-justify mb-8 max-w-2xl mx-auto columns-2 gap-8">
           <p className="mb-4">
-            I love you and the air you breathe and the things you do. somehow you've managed to touch my heart in ways i never thought it could be and now, your name is all i can think of when i think about love, your name, the sound of your voice, your touch and your breath on my skin. it's all written down and signed by you. Thank you for being mine, it completes me. I love you.
+            I love you and the air you breathe and the things you do. somehow you&apos;ve managed to touch my heart in ways i never thought it could be and now, your name is all i can think of when i think about love, your name, the sound of your voice, your touch and your breath on my skin. it&apos;s all written down and signed by you. Thank you for being mine, it completes me. I love you.
           </p>
           <p className="mb-4">
           I love you with everything, for everything, in everything. I hope this doesn’t make you feel a type of way. I do love you, with everything in me, all my heart and from the depths of my soul, i feel it in every part of me.
@@ -103,7 +103,7 @@ const ValentinesDispatch = () => {
         {/* Admission Ticket */}
         <div className="border-2 border-pink-200 p-4 rounded-lg max-w-xs mx-auto">
           <div className="border-2 border-dashed border-pink-300 p-4 text-center">
-            <h3 className="font-bold mb-2">Valentine's Day</h3>
+            <h3 className="font-bold mb-2">Valentine&apos;s Day</h3>
             <p className="text-sm mb-1">♥</p>
             <p className="text-sm mb-1">No.1</p>
             <p className="text-sm">ADMIT THE LOML</p>
