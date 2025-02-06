@@ -1,10 +1,14 @@
 "use client";
 
+
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 
+
 const ValentinesDispatch = () => {
-  const [response, setResponse] = useState(null);
+  type ResponseType = 'yes' | 'no' | null;
+
+  const [response, setResponse] = useState<ResponseType>(null);
 
   return (
     <div className="min-h-screen bg-pink-50/60 p-4 md:p-8">
