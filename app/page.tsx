@@ -1,101 +1,113 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React, { useState } from 'react';
+import { Heart } from 'lucide-react';
+
+const ValentinesDispatch = () => {
+  const [response, setResponse] = useState(null);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-pink-50/60 p-4 md:p-8">
+      <div className="max-w-3xl mx-auto bg-gradient-to-b from-pink-50 to-pink-100/50 shadow-lg p-6 md:p-12">
+        {/* Header with arrows */}
+        <div className="text-center mb-6">
+          <div className="flex justify-center items-center gap-4 text-pink-300">
+            <div className="text-2xl">←</div>
+            <h3 className="text-sm tracking-wide" style={{ fontFamily: 'Times New Roman, serif' }}>
+              St. Valentine's Day : February 14th : The Hall Times
+            </h3>
+            <div className="text-2xl">→</div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          
+        {/* Main Title */}
+        <div className="text-center mb-8">
+          <h1 className="text-5xl md:text-6xl mb-2" style={{ fontFamily: 'Times New Roman, serif' }}>
+            Nerdy GF creates website to ask her gorgeous BF
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-white" style={{ fontFamily: 'Times New Roman, serif' }}>
+            They're so cute!
+          </h2>
+        </div>
+          
+        {/* Special Day Banner */}
+        <div className="text-center mb-6">
+          <p className="text-xs tracking-[0.2em] text-gray-600">
+            EXTRA SPECIAL! BREAKING NEWS!! EXTRA SPECIAL! BREAKING NEWS!!
+          </p>
+        </div>
+          
+        {/* Hearts Border */}
+        <div className="flex justify-center flex-wrap gap-2 text-pink-300 mb-8">
+          {Array(20).fill('♥').map((heart, i) => (
+            <span key={i} className="text-pink-300">{heart}</span>
+          ))}
+        </div>
+
+        {/* Main Question */}
+        {!response ? (
+          <div className="text-center space-y-8 mb-12">
+            <div>
+              <h2 className="text-4xl md:text-6xl mb-4 tracking-wide" style={{ fontFamily: 'Times New Roman, serif' }}>
+                WILL YOU BE MY
+              </h2>
+              <h2 className="text-4xl md:text-6xl text-pink-400 font-serif italic mb-2">
+                Valentine?
+              </h2>
+              <p className="text-sm text-gray-500">(say yes or i bite you)</p>
+            </div>
+
+            {/* Yes/No Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button 
+                onClick={() => setResponse('yes')}
+                className="bg-pink-400 hover:bg-pink-500 text-white px-8 py-3 rounded-full transition-all transform hover:scale-105"
+              >
+                Yes ♥
+              </button>
+              <button 
+                onClick={() => setResponse('no')}
+                className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-8 py-3 rounded-full transition-all transform hover:translate-y-20 hover:opacity-0"
+              >
+                No
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="text-center space-y-4 mb-12 animate-fadeIn">
+            {response === 'yes' ? (
+              <>
+                <h2 className="text-4xl text-pink-500">Yay! ♥</h2>
+                <p className="text-xl">I'm the luckiest girl in the world!</p>
+              </>
+            ) : (
+              <p className="text-xl">The 'No' button was just for decoration, you're still mine 🥰</p>
+            )}
+          </div>
+        )}
+
+        {/* Love Message */}
+        <div className="text-xs text-gray-500 text-justify mb-8 max-w-2xl mx-auto columns-2 gap-8">
+          <p className="mb-4">
+            I love you and the air you breathe and the things you do. somehow you've managed to touch my heart in ways i never thought it could be and now, your name is all i can think of when i think about love, your name, the sound of your voice, your touch and your breath on my skin. it's all written down and signed by you. Thank you for being mine, it completes me. I love you.
+          </p>
+          <p className="mb-4">
+          I love you with everything, for everything, in everything. I hope this doesn’t make you feel a type of way. I do love you, with everything in me, all my heart and from the depths of my soul, i feel it in every part of me.
+          </p>
+        </div>
+
+        {/* Admission Ticket */}
+        <div className="border-2 border-pink-200 p-4 rounded-lg max-w-xs mx-auto">
+          <div className="border-2 border-dashed border-pink-300 p-4 text-center">
+            <h3 className="font-bold mb-2">Valentine's Day</h3>
+            <p className="text-sm mb-1">♥</p>
+            <p className="text-sm mb-1">No.1</p>
+            <p className="text-sm">ADMIT THE LOML</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default ValentinesDispatch;
